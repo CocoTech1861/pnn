@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Control Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: #0f1115;
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 24px 0 8px;
+      font-size: 28px;
+    }
+
+    p {
+      text-align: center;
+      opacity: 0.7;
+      margin-bottom: 24px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 0 auto 32px;
+      padding: 0 16px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      border-left: 4px solid #4da3ff;
+      padding-left: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    a.button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      background: #1a1d24;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    a.button:hover {
+      background: #222632;
+      transform: translateY(-2px);
+    }
+
+    .vnc {
+      border-left: 4px solid #00d084;
+    }
+
+    .companion {
+      border-left: 4px solid #ff9f43;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 13px;
+      opacity: 0.6;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Network Control Hub</h1>
+  <p>Quick access to show systems</p>
+
+  <div class="section">
+    <h2>Screen Sharing (Mac)</h2>
+    <div class="grid">
+      <a class="button vnc" href="vnc://100.91.110.1">Control Mac</a>
+      <a class="button vnc" href="vnc://100.91.110.2">Graphics Mac</a>
+      <a class="button vnc" href="vnc://100.91.110.3">Playback Mac</a>
+      <a class="button vnc" href="vnc://100.91.110.4">Engineering Mac</a>
+    </div>
+    <div class="note">Screen Sharing buttons work on macOS only</div>
+  </div>
+
+  <div class="section">
+    <h2>Companion</h2>
+    <div class="grid">
+      <a class="button companion" href="http://100.91.110.10:8000">Companion Main</a>
+      <a class="button companion" href="http://100.91.110.11:8000">Companion Backup</a>
+    </div>
+  </div>
+
+</body>
+</html>
